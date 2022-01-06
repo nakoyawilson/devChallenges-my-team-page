@@ -53,6 +53,7 @@ header {
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: 0.625rem;
 }
 
 .header-text {
@@ -131,4 +132,62 @@ main {
 .attribution a:hover {
   color: var(--black);
   text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 60rem;
+    padding: 6.875rem 0 1.5rem 0;
+  }
+
+  header {
+    display: flex;
+    gap: 13.4375rem;
+  }
+
+  .header-text {
+    font-size: 1.125rem;
+    width: 27.4375rem;
+  }
+
+  main {
+    margin-bottom: 7.1875rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, 32.1875rem);
+    padding-left: 0;
+  }
+
+  .team-member:nth-child(even) {
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .team-member:nth-child(2),
+  .team-member:nth-child(5) {
+    padding-top: 6.1875rem;
+  }
+
+  .photo-container {
+    width: 14.875rem;
+  }
+
+  .photo {
+    margin-bottom: 0.9375rem;
+  }
+
+  .name {
+    font-size: 1.125rem;
+  }
+
+  .role {
+    font-size: 0.75rem;
+    height: 1.375rem;
+    width: 10rem;
+    top: 4.4rem;
+    left: -4.2rem;
+  }
 }
