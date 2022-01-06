@@ -1,34 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "PT Serif", serif;
+  --font-tertiary: "Montserrat", sans-serif;
+  --black: #000;
+  --bg-color: #fafafa;
+  --grey: #a9a9a9;
+}
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--black);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
 }
 
-ul {
-  padding-left: 24px;
-}
+/* Container */
 
-li {
-  margin-bottom: 8px;
-}
-
-.welcome {
-  max-width: 800px;
+.container {
+  width: min(100%, 23.4375rem);
   margin: 0 auto;
+  padding: 4.4375rem 0.75rem 1.5rem;
 }
 
-.welcome-text {
-  margin-top: 30vh;
-  font-weight: 500;
+/* Header Section */
+header {
+  margin-bottom: 3.875rem;
+}
+.headline {
+  font-family: var(--font-secondary);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 2.375rem;
+  letter-spacing: -0.045em;
 }
 
-.welcome-text p {
-  font-size: 1rem;
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header-text {
+  width: min(100%, 20.8125rem);
+}
+
+/* Main Section */
+main {
+  margin-bottom: 8.18375rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, 18.75rem);
+  padding-left: 0.4375rem;
+  justify-content: space-between;
+}
+
+.team-member {
+  display: flex;
+}
+
+.photo-container {
+  width: min(100%, 8.6875rem);
+  margin-bottom: 4rem;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.625rem;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.role-container {
+  position: relative;
+}
+
+.role {
+  font-family: var(--font-secondary);
+  font-size: 0.625rem;
   font-weight: 400;
+  text-transform: uppercase;
+  transform: rotate(90deg);
+  position: absolute;
+  height: 0.625rem;
+  width: 10rem;
+  top: 4.75rem;
+  left: -4.4rem;
 }
 
-.welcome-text h1 {
-  font-size: 1.5rem;
+.team-member:nth-child(even) {
+  margin-left: 1rem;
+  padding-top: 3rem;
 }
 
-.welcome-text a {
-  color: #f7542e;
+/* Footer Section */
+.attribution,
+.attribution a {
+  color: var(--grey);
+}
+
+.attribution {
+  font-weight: 500;
+  text-align: center;
+}
+
+.attribution a {
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  color: var(--black);
+  text-decoration: none;
 }
